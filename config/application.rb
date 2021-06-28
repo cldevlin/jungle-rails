@@ -13,6 +13,12 @@ require "sprockets/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
+
+# hide warnings about default localization behaviour:
+#   [DEPRECATION] You are using the default localization behaviour that will change 
+#   in the next major release. Find out more - https://github.com/RubyMoney/money#deprecation
+ActiveSupport::Deprecation.behavior = :silence
+
 Bundler.require(*Rails.groups)
 
 module Jungle
