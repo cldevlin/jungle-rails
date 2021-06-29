@@ -21,6 +21,32 @@ end
 
 # Let's do this ...
 
+puts "Finding or Creating Users..."
+
+User.destroy_all
+
+user1 = User.create({
+  "first_name"=>"Sally", 
+  "last_name"=>"McGee", 
+  "email"=>"sally@mcgee.com", 
+  "password"=>"123", 
+  "password_confirmation"=>"123"
+})
+user2 = User.create({
+  "first_name"=>"Max", 
+  "last_name"=>"McGee", 
+  "email"=>"max@mcgee.com", 
+  "password"=>"123", 
+  "password_confirmation"=>"123"
+})
+user3 = User.create({
+  "first_name"=>"Alex", 
+  "last_name"=>"Edwards", 
+  "email"=>"alex@edwards.com", 
+  "password"=>"123", 
+  "password_confirmation"=>"123"
+})
+
 ## CATEGORIES
 
 puts "Finding or Creating Categories ..."

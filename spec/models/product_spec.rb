@@ -18,8 +18,6 @@ RSpec.describe Product, type: :model do
     it 'should validate that a price is present' do
       @category = Category.new({ "name"=>"Other"})
       @product = Product.new( {"name"=>"table", "quantity"=>"3", "category"=>@category })
-      puts "~~~~~~~~~~~~~~~~~~~~~~~~OJOJOJOJODFJBOSZDJFOZBMDBGMSDG"
-      puts @product.inspect
       expect(@product.save).to be_falsy
     end
 
